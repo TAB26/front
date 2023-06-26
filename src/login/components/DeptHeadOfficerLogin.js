@@ -22,7 +22,7 @@ const DeptHeadOfficerLogin = () => {
     e.preventDefault();
     
     try {
-      const response = await fetch("https://fleet-administration.onrender.com//api/departmentHeads/login", {
+      const response = await fetch("https://fleet-administration.onrender.com/api/departmentHeads/login", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
