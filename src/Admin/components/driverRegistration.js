@@ -41,7 +41,7 @@ const DriverRegistration = () => {
     e.preventDefault();
   
     try {
-      const response = await fetch("http://localhost:5000/api/drivers", {
+      const response = await fetch("https://fleet-administration.onrender.com/api/drivers", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
