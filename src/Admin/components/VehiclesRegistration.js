@@ -38,7 +38,7 @@ vehicleStatus: "unassigned"
     e.preventDefault();
 
     try {
-      const response = await fetch("http://localhost:5000/api/vehicles", {
+      const response = await fetch("https://fleet-administration.onrender.com/api/vehicles", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
