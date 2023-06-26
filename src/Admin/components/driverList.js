@@ -18,7 +18,7 @@ const DriverList = () => {
 
   const fetchDrivers = async () => {
     try {
-      const response = await fetch("http://localhost:5000/api/drivers");
+      const response = await fetch("https://fleet-administration.onrender.com/api/drivers");
       const data = await response.json();
       setDrivers(data.drivers);
     } catch (error) {
@@ -32,7 +32,7 @@ const DriverList = () => {
 
   const deleteDriver = async (id) => {
     try {
-      await fetch(`http://localhost:5000/api/drivers/${id}`, {
+      await fetch(`https://fleet-administration.onrender.com/api/drivers/${id}`, {
         method: "DELETE",
       });
       fetchDrivers();
@@ -43,7 +43,7 @@ const DriverList = () => {
 
   const updateDriver = async (id, updatedData) => {
     try {
-      await fetch(`http://localhost:5000/api/drivers/${id}`, {
+      await fetch(`https://fleet-administration.onrender.com/api/drivers/${id}`, {
         method: "PUT",
         headers: {
           "Content-Type": "application/json",
