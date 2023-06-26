@@ -29,7 +29,7 @@ const AdminNavbarr = () => {
   useEffect(() => {
     const fetchAdminPrrofile = async () => {
       try {
-        const response = await fetch(`http://localhost:5000/api/admins?username=${adminUsername}`);
+        const response = await fetch(`https://fleet-administration.onrender.com/api/admins?username=${adminUsername}`);
         const data = await response.json();
         //setDriverProfile(data);
         console.log(data);
