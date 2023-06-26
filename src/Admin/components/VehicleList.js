@@ -32,7 +32,7 @@ const VehicleList = () => {
   // Delete a vehicle record
   const deleteVehicle = async (id) => {
     try {
-      await fetch(`http://localhost:5000/api/vehicles/${id}`, {
+      await fetch(`https://fleet-administration.onrender.com/api/vehicles/${id}`, {
         method: "DELETE",
       });
       fetchVehicles();
@@ -43,7 +43,7 @@ const VehicleList = () => {
 
   const updateVehicle = async (id, updatedData) => {
     try {
-      await fetch(`http://localhost:5000/api/vehicles/${id}`, {
+      await fetch(`https://fleet-administration.onrender.com/api/vehicles/${id}`, {
         method: "PUT",
         headers: {
           "Content-Type": "application/json",
