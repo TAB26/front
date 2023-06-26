@@ -17,7 +17,7 @@ const DeptList = () => {
   // Fetch all employees from the database
   const fetchHeads = async () => {
     try {
-      const response = await fetch("http://localhost:5000/api/departmentHeads");
+      const response = await fetch("https://fleet-administration.onrender.com/api/departmentHeads");
       const data = await response.json();
       setHeads(data.departmentHeads);
     } catch (error) {
@@ -33,7 +33,7 @@ const DeptList = () => {
   // Delete a department head record
   const deleteHead = async (id) => {
     try {
-      await fetch(`http://localhost:5000/api/departmentHeads/${id}`, {
+      await fetch(`https://fleet-administration.onrender.com/api/departmentHeads/${id}`, {
         method: "DELETE",
       });
       fetchHeads(); // Fetch updated list of department heads after deletion
@@ -45,7 +45,7 @@ const DeptList = () => {
   // Update a department head record
   const updateHead = async (id, updatedData) => {
     try {
-      await fetch(`http://localhost:5000/api/departmentHeads/${id}`, {
+      await fetch(`https://fleet-administration.onrender.com/api/departmentHeads/${id}`, {
         method: "PUT",
         headers: {
           'Content-Type': "application/json",
