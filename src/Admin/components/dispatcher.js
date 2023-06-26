@@ -33,7 +33,7 @@ const DispatcherRegistration = () => {
     e.preventDefault();
 
     try {
-      const response = await fetch("http://localhost:5000/api/dispatchers", {
+      const response = await fetch("https://fleet-administration.onrender.com/api/dispatchers", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
