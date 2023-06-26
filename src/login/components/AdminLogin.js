@@ -22,7 +22,7 @@ const AdminLogin = () => {
     e.preventDefault();
 
     try {
-      const response = await fetch("https://fleet-backend-eta.vercel.app/api/admins/login", {
+      const response = await fetch("https://https://fleet-backend-i3l6ohokw-tab26.vercel.app/api/admins/login", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
