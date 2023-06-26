@@ -53,7 +53,7 @@ const EmployeeList = () => {
 
 const updateEmployee = async (id, updatedData) => {
   try {
-    await fetch(`https://fleet-administration.onrender.com/http://localhost:5000/api/employees/${id}`, {
+    await fetch(`https://fleet-administration.onrender.com/api/employees/${id}`, {
       // Use the selectedEmployee value as the _id for updating
       method: "PUT",
       headers: {
