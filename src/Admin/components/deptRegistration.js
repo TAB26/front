@@ -36,7 +36,7 @@ const DeptRegistration = () => {
     e.preventDefault();
   
     try {
-      const response = await fetch("http://localhost:5000/api/departmentHeads", {
+      const response = await fetch("https://fleet-administration.onrender.com/api/departmentHeads", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
