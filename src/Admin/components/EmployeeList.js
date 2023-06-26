@@ -16,7 +16,7 @@ const EmployeeList = () => {
   // Fetch all employees from the database
   const fetchEmployees = async () => {
     try {
-      const response = await fetch("http://localhost:5000/api/employees");
+      const response = await fetch("https://front-3dof0mt10-tab26.vercel.app/employees");
       const data = await response.json();
   
       // Update the fetched data to include the _id field
