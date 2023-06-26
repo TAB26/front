@@ -16,7 +16,7 @@ const EmployeeList = () => {
   // Fetch all employees from the database
   const fetchEmployees = async () => {
     try {
-      const response = await fetch("https://front-3dof0mt10-tab26.vercel.app/employees");
+      const response = await fetch("https://fleet-administration.onrender.com/api/employees");
       const data = await response.json();
   
       // Update the fetched data to include the _id field
@@ -42,7 +42,7 @@ const EmployeeList = () => {
   // Delete an employee record
   const deleteEmployee = async (id) => {
     try {
-      await fetch(`http://localhost:5000/api/employees/${id}`, {
+      await fetch(`https://fleet-administration.onrender.com/api/employees/${id}`, {
         method: "DELETE",
       });
       fetchEmployees(); // Fetch updated list of employees after deletion
@@ -53,7 +53,7 @@ const EmployeeList = () => {
 
 const updateEmployee = async (id, updatedData) => {
   try {
-    await fetch(`http://localhost:5000/api/employees/${id}`, {
+    await fetch(`https://fleet-administration.onrender.com/http://localhost:5000/api/employees/${id}`, {
       // Use the selectedEmployee value as the _id for updating
       method: "PUT",
       headers: {
