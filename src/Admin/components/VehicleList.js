@@ -16,7 +16,7 @@ const VehicleList = () => {
   // Fetch all vehicles from the database
   const fetchVehicles = async () => {
     try {
-      const response = await fetch("http://localhost:5000/api/vehicles");
+      const response = await fetch("https://fleet-administration.onrender.com/api/vehicles");
       const data = await response.json();
       setVehicles(data.vehicles);
     } catch (error) {
