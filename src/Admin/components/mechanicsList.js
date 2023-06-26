@@ -15,7 +15,7 @@ const MechanicsList = () => {
   // Fetch all dispatchers from the database
   const fetchMechanics = async () => {
     try {
-      const response = await fetch("http://localhost:5000/api/mechanics");
+      const response = await fetch("https://fleet-administration.onrender.com/api/mechanics");
       const data = await response.json();
       setMechanics(data.mechanics);
     } catch (error) {
@@ -31,7 +31,7 @@ const MechanicsList = () => {
   // Delete a dispatcher record
   const deleteMechanics = async (id) => {
     try {
-      await fetch(`http://localhost:5000/api/mechanics/${id}`, {
+      await fetch(`https://fleet-administration.onrender.com/api/mechanics/${id}`, {
         method: "DELETE",
       });
       fetchMechanics(); // Fetch updated list of department heads after deletion
@@ -44,7 +44,7 @@ const MechanicsList = () => {
 
   const updateMechanics = async (id, updateData) => {
     try {
-      await fetch(`http://localhost:5000/api/mechanics/${id}`, {
+      await fetch(`https://fleet-administration.onrender.com/api/mechanics/${id}`, {
         method: "PUT",
         headers: {
           'Content-Type': "application/json",
